@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-image: linear-gradient(to bottom right, blue, green, yellow, red);
+            }
+        </style>
+        <script>
+            function sendCommand() {
+                var xhr = new XMLHttpRequest();
+                var command = document.getElementById("command").value;
+                xhr.open("POST", "/send_command", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                        alert(this.responseText);
+                    }
+                };
+                xhr.send("command=" + command);
+            }
+        </script>
+    </head>
+    <body>
+        <textarea id="command"></textarea>
+        <button onclick="sendCommand()">Send Command</button>
+    </body>
+</html>
+
+
+
