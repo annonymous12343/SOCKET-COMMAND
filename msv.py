@@ -86,6 +86,7 @@ def options():
 |icloudflared -install cloudflared   |
 |arch -checking if its 32bit or 64bit|
 |____________________________________|
+site: http://localhost:6660
          """)
 
 
