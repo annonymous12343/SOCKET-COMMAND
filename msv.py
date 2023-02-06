@@ -13,7 +13,7 @@ clients = []
 responses = []
 
 def banner():
-   print("""
+   print(Fore.YELLOW +"""
 ────░░░───────────────────────────░░░───
 ─░░░─────────░▒▒▒▓▓▓▓▓▓▓▓▓▓▒▒▓▓─────░───
 ░░──────▒█████████████▓▓▓▓▓▒▓▓██▓────░──
@@ -75,7 +75,10 @@ def banner():
 ──░──░████───░░─────────░░░░░─────░─────
 ──░░──▒░────░░────▒░─────────────░──────
             (Made By Denis!)
-""")
+""" +RESET_ALL)
+ 
+
+
 
 def options():
    print(Fore.GREEN +"""
@@ -87,7 +90,7 @@ def options():
 |arch -checking if its 32bit or 64bit|
 |____________________________________|
 site: http://localhost:6660
-         """)
+         """ +RESET_ALL)
 
 
 
